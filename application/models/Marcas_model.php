@@ -4,8 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Marcas_model extends CI_Model {
 
 	public function getMarcas(){
+		$this->db->select('id, nombre');
+		$this->db->from('marcas');
 		$this->db->where("estado","1");
-		$resultados = $this->db->get("marcas");
+		$resultados = $this->db->get();
 		return $resultados->result();
 	}
 

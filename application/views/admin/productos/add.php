@@ -32,16 +32,16 @@
                                 <input type="text" class="form-control" id="nombre" name="nombre">
                             </div>
                             <div class="form-group">
-                                <label for="descripcion">Descripcion:</label>
-                                <input type="text" class="form-control" id="descripcion" name="descripcion">
+                                <label for="peso">Peso:</label>
+                                <input type="text" class="form-control" id="peso" name="peso">
                             </div>
                             <div class="form-group">
-                                <label for="precio">Precio:</label>
-                                <input type="text" class="form-control" id="precio" name="precio">
+                                <label for="precioCosto">Precio costo:</label>
+                                <input type="text" class="form-control" id="precioCosto" name="precioCosto">
                             </div>
                             <div class="form-group">
-                                <label for="stock">Stock:</label>
-                                <input type="text" class="form-control" id="stock" name="stock">
+                                <label for="precioVenta">Precio venta:</label>
+                                <input type="text" class="form-control" id="precioPublico" name="precioVenta">
                             </div>
                             <div class="form-group">
                                 <label for="categoria">Categoria:</label>
@@ -52,7 +52,16 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label for="marca">Marca:</label>
+                                <select name="marca" id="marca" class="form-control">
+                                    <?php foreach($marcas as $marca):?>
+                                        <option value="<?php echo $marca->id?>"><?php echo $marca->nombre;?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-flat">Guardar</button>
+                                <a href="<?php echo base_url() ?>index.php/mantenimiento/productos" class="btn btn-danger btn-flat">Cancelar</a>
                             </div>
                         </form>
                     </div>

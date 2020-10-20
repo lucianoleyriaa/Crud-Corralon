@@ -33,22 +33,26 @@
                                 <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $producto->nombre?>">
                             </div>
                             <div class="form-group">
-                                <label for="descripcion">Descripcion:</label>
-                                <input type="text" class="form-control" id="descripcion" name="descripcion" value="<?php echo $producto->descripcion?>">
+                                <label for="peso">Peso:</label>
+                                <input type="text" class="form-control" id="peso" name="peso" value="<?php echo $producto->peso?>">
                             </div>
                             <div class="form-group">
-                                <label for="precio">Precio:</label>
-                                <input type="text" class="form-control" id="precio" name="precio" value="<?php echo $producto->precio?>">
+                                <label for="precioCosto">Precio costo:</label>
+                                <input type="text" class="form-control" id="precioCosto" name="precioCosto" value="<?php echo $producto->precio_costo?>">
                             </div>
                             <div class="form-group">
+                                <label for="precioVenta">Precio venta:</label>
+                                <input type="text" class="form-control" id="precioVenta" name="precioVenta" value="<?php echo $producto->precio_venta?>">
+                            </div>
+                            <!-- <div class="form-group">
                                 <label for="stock">Stock:</label>
                                 <input type="text" class="form-control" id="stock" name="stock" value="<?php echo $producto->stock?>">
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label for="categoria">Categoria:</label>
                                 <select name="categoria" id="categoria" class="form-control">
                                     <?php foreach($categorias as $categoria):?>
-                                        <?php if($categoria->id == $producto->categoria_id):?>
+                                        <?php if($categoria->id == $producto->id_categoria):?>
                                         <option value="<?php echo $categoria->id?>" selected><?php echo $categoria->nombre;?></option>
                                     <?php else:?>
                                         <option value="<?php echo $categoria->id?>"><?php echo $categoria->nombre;?></option>
@@ -57,7 +61,20 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label for="marca">Marca:</label>
+                                <select name="marca" id=marca" class="form-control">
+                                    <?php foreach($marcas as $marca):?>
+                                        <?php if($marca->id == $producto->id_marca):?>
+                                        <option value="<?php echo $marca->id?>" selected><?php echo $marca->nombre;?></option>
+                                    <?php else:?>
+                                        <option value="<?php echo $marca->id?>"><?php echo $marca->nombre;?></option>
+                                        <?php endif;?>
+                                    <?php endforeach;?>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-flat">Guardar</button>
+                                <a href="<?php echo base_url()."index.php/mantenimiento/productos" ?>" class="btn btn-danger btn-flat">Cancelar</a>
                             </div>
                         </form>
                     </div>

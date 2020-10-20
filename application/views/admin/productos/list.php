@@ -45,9 +45,9 @@
                                             <td><?php echo $producto->peso;?></td>
                                             <td><?php echo $producto->precio_costo;?></td>
                                             <td><?php echo $producto->precio_venta;?></td>
-                                            <td><?php echo $producto->id_categoria;?></td>
-                                            <td><?php echo $producto->id_marca;?></td>
-                                            <?php $dataproducto = $producto->id."*".$producto->codigo."*".$producto->nombre."*".$producto->descripcion."*".$producto->precio."*".$producto->stock."*".$producto->categoria;?>
+                                            <td><?php echo $producto->categoria;?></td>
+                                            <td><?php echo $producto->marca;?></td>
+                                            <?php $dataproducto = $producto->id."*".$producto->codigo."*".$producto->nombre."*".$producto->peso."*".$producto->precio_costo."*".$producto->precio_venta."*".$producto->categoria."*".$producto->marca;?>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-info btn-view-producto" data-toggle="modal" data-target="#modal-default" value="<?php echo $dataproducto;?>">

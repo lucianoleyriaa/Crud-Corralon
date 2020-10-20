@@ -42,12 +42,14 @@ $(document).ready(function () {
         var producto = $(this).val(); 
         //alert(productos);
         var infoproducto = producto.split("*");
-        html = "<p><strong>Codigo:</strong>"+infoproducto[1]+"</p>"
-        html += "<p><strong>Nombre:</strong>"+infoproducto[2]+"</p>"
-        html += "<p><strong>Descripcion:</strong>"+infoproducto[3]+"</p>"
-        html += "<p><strong>Precio:</strong>"+infoproducto[4]+"</p>"
-        html += "<p><strong>Stock:</strong>"+infoproducto[5]+"</p>"
-        html += "<p><strong>Categoria:</strong>"+infoproducto[6]+"</p>";
+        html = "<p><strong>Id: </strong>"+infoproducto[0]+"</p>"
+        html = "<p><strong>Codigo: </strong>"+infoproducto[1]+"</p>"
+        html += "<p><strong>Nombre: </strong>"+infoproducto[2]+"</p>"
+        html += "<p><strong>Peso: </strong>"+infoproducto[3]+"</p>"
+        html += "<p><strong>Precio costo: </strong>"+infoproducto[4]+"</p>"
+        html += "<p><strong>Precio de venta: </strong>"+infoproducto[5]+"</p>"
+        html += "<p><strong>Categoria: </strong>"+infoproducto[6]+"</p>";
+        html += "<p><strong>Marca: </strong>"+infoproducto[7]+"</p>";
         $("#modal-default .modal-body").html(html);
     });
   

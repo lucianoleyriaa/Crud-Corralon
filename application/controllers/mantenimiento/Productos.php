@@ -36,10 +36,10 @@ class Productos extends CI_Controller {
 		$codigo = $this->input->post("codigo");
 		$nombre = $this->input->post("nombre");
 		$peso = $this->input->post("peso");
-		$precio_costo = $this->input->post("precio_costo");
-		$precio_venta = $this->input->post("precio_venta");
-		$id_categoria = $this->input->post("id_categoria");
-		$id_marca = $this->input->post("id_marca");
+		$precio_costo = $this->input->post("precioCosto");
+		$precio_venta = $this->input->post("precioVenta");
+		$id_categoria = $this->input->post("categoria");
+		$id_marca = $this->input->post("marca");
 
 		$data  = array(
 			'codigo' => $codigo, 
@@ -65,7 +65,7 @@ class Productos extends CI_Controller {
 		$data =array( 
 			"producto" => $this->Productos_model->getProducto($id),
 			"categorias" => $this->Categorias_model->getCategorias(),
-			"Marcas" => $this->Marcas_model->getMarcas()
+			"marcas" => $this->Marcas_model->getMarcas()
 		);
 		$this->load->view("layouts/header");
 		$this->load->view("layouts/aside");
@@ -78,10 +78,11 @@ class Productos extends CI_Controller {
 		$codigo = $this->input->post("codigo");
 		$nombre = $this->input->post("nombre");
 		$peso = $this->input->post("peso");
-		$precio_costo = $this->input->post("precio_costo");
-		$precio_venta = $this->input->post("precio_venta");
-		$id_categoria = $this->input->post("id_categoria");
-		$id_marca = $this->input->post("id_marca");
+		$precio_costo = $this->input->post("precioCosto");
+		$precio_venta = $this->input->post("precioVenta");
+		$id_categoria = $this->input->post("categoria");
+		$id_marca = $this->input->post("marca");
+
 		$data  = array(
 			'codigo' => $codigo, 
 			'nombre' => $nombre,
